@@ -21,34 +21,34 @@
 
     <div class="container">
         <div class="row">
-            <form class="col">
+            <form class="col" id="searchForm">
                 <div class="form-group">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Search Term</label>
-                        <input type="email" class="form-control" id="Search" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="SearchText" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">Number of Records to Retrieve</label>
                         <select class="form-control" id="recordNumber">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
                             <option>5</option>
-                          </select>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option>
+                            <option>25</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Start Year (Optional)</label>
-                        <input type="email" class="form-control" id="startY" aria-describedby="emailHelp">
+                        <input type="year" class="form-control" id="startYText" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">End Year (Optional)</label>
-                        <input type="email" class="form-control" id="endY" aria-describedby="emailHelp">
+                        <input type="year" class="form-control" id="endYText" aria-describedby="emailHelp">
                     </div>
                 </div>
                 <div class="row">
-                    <a class="col" type="submit">Search</a>
-                    <a class="col" type="submit">Clear Results</a>
+                    <a class="col" type="submit" id="searchBtn">Search</a>
+                    <a class="col" id="clearBtn">Clear Results</a>
                 </div>
         </div>
         </form>
@@ -60,29 +60,54 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+        var searchText = $("#searchText").val();
+        var recordNumber = $("#recordNumber").val();
+        var startYText = $("#startYText").val();
+        var endYText = $("#endYText").val();
+
+
+
+        $("#searchBtn").on("click",function(e){
+            e.preventDefault();
+            
+
+
+
+
+        });
+
+        $("#clearBtn").on("click",function(e){
+            e.preventDefault();
+        
+            searchText = $("#searchText").val("");
+        recordNumber = $("#recordNumber").val("");
+         startYText = $("#startYText").val("");
+        endYText = $("#endYText").val("");
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 
